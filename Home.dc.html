@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F7F4EF; }
+  @keyframes heroWord { from { opacity:0; transform:translateY(28px);} to { opacity:1; transform:translateY(0);} }
+  @keyframes marqueeScroll { from { transform:translateX(0);} to { transform:translateX(-50%);} }
+  @keyframes marqueeScrollRev { from { transform:translateX(-50%);} to { transform:translateX(0);} }
+  ::selection { background:#C15B36; color:#F7F4EF; }
+  a { color:#C15B36; text-decoration:none; }
+  a:hover { color:#33544E; }
+  summary { list-style:none; }
+  summary::-webkit-details-marker { display:none; }
+</style>
+</helmet>
+
+<div style="font-family:'Work Sans',sans-serif;color:#1C1B19;background:#F7F4EF;overflow-x:hidden;">
+
+  <!-- HEADER -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(247,244,239,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(28,27,25,0.08);">
+    <div style="max-width:1280px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;">
+      <a href="Home.dc.html" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:#1C1B19;letter-spacing:-0.02em;">ERGOSEAT</a>
+      <nav style="display:flex;gap:32px;align-items:center;">
+        <details style="position:relative;">
+          <summary style="font-size:14px;font-weight:500;color:#1C1B19;cursor:pointer;display:flex;align-items:center;gap:4px;"><a href="Category.dc.html" style="color:#1C1B19;">Our Chairs</a> <span style="font-size:10px;">&#9662;</span></summary>
+          <div style="position:absolute;top:100%;left:0;margin-top:12px;background:#fff;border:1px solid rgba(28,27,25,0.1);border-radius:3px;box-shadow:0 16px 32px rgba(28,27,25,0.12);min-width:180px;padding:8px;z-index:60;">
+            <a href="Category.dc.html?cat=Economical" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Economical</a>
+            <a href="Category.dc.html?cat=Premium" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Premium</a>
+            <a href="Category.dc.html?cat=Luxury" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Luxury</a>
+          </div>
+        </details>
+        <details style="position:relative;">
+          <summary style="font-size:14px;font-weight:500;color:#1C1B19;cursor:pointer;display:flex;align-items:center;gap:4px;"><a href="ForYou.dc.html" style="color:#1C1B19;">Shop By You</a> <span style="font-size:10px;">&#9662;</span></summary>
+          <div style="position:absolute;top:100%;left:0;margin-top:12px;background:#fff;border:1px solid rgba(28,27,25,0.1);border-radius:3px;box-shadow:0 16px 32px rgba(28,27,25,0.12);min-width:200px;padding:8px;z-index:60;">
+            <a href="Corporate.dc.html" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Corporate &amp; Office</a>
+            <a href="HomeOffice.dc.html" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Home &amp; Remote</a>
+            <a href="Gamers.dc.html" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Gamers</a>
+            <a href="Budget.dc.html" style="display:block;padding:10px 14px;font-size:14px;color:#1C1B19;border-radius:2px;">Budget-Conscious</a>
+          </div>
+        </details>
+        <a href="About.dc.html" style="font-size:14px;font-weight:500;color:#1C1B19;">About</a>
+        <a href="Blog.dc.html" style="font-size:14px;font-weight:500;color:#1C1B19;">Blog</a>
+        <a href="Contact.dc.html" style="font-size:14px;font-weight:600;color:#F7F4EF;background:#C15B36;padding:10px 20px;border-radius:2px;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative;min-height:92vh;display:flex;align-items:center;background:#1C1B19;overflow:hidden;">
+    <img src="https://images.unsplash.com/photo-1518481852452-9415b262eba4?auto=format&fit=crop&w=1920&q=80" alt="Ergonomic office chair" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.38;" />
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,27,25,0.55) 0%, rgba(28,27,25,0.85) 100%);"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 32px;width:100%;">
+      <div style="max-width:760px;">
+        <p style="color:#C15B36;font-weight:600;letter-spacing:0.12em;font-size:13px;text-transform:uppercase;margin:0 0 20px;">Ergonomic Seating, Reimagined</p>
+        <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(44px,7vw,84px);line-height:1.02;font-weight:700;color:#F7F4EF;margin:0 0 28px;letter-spacing:-0.02em;">
+          <span style="display:inline-block;margin-right:0.3em;opacity:0;animation:heroWord 0.7s ease 0.05s forwards;">Sit</span><span style="display:inline-block;opacity:0;animation:heroWord 0.7s ease 0.2s forwards;">better.</span><br/>
+          <span style="display:inline-block;margin-right:0.3em;opacity:0;animation:heroWord 0.7s ease 0.35s forwards;">Work</span><span style="display:inline-block;opacity:0;animation:heroWord 0.7s ease 0.5s forwards;color:#C15B36;">better.</span>
+        </h1>
+        <p style="font-size:18px;line-height:1.6;color:rgba(247,244,239,0.75);max-width:520px;margin:0 0 36px;">Lorem ipsum dolor sit amet — science-backed ergonomic chairs built for long days, healthy posture, and every kind of workspace.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="Category.dc.html" style="background:#C15B36;color:#F7F4EF;padding:16px 32px;font-weight:600;font-size:15px;border-radius:2px;">Shop Bestsellers</a>
+          <a href="#finder" style="border:1px solid rgba(247,244,239,0.4);color:#F7F4EF;padding:16px 32px;font-weight:600;font-size:15px;border-radius:2px;">Find My Chair</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED ON MARQUEE -->
+  <section style="background:#F7F4EF;padding:28px 0;border-bottom:1px solid rgba(28,27,25,0.08);overflow:hidden;">
+    <p style="text-align:center;font-size:12px;letter-spacing:0.14em;color:#A9A29B;font-weight:600;margin:0 0 18px;">AS FEATURED ON</p>
+    <div style="display:flex;width:max-content;animation:marqueeScroll 28s linear infinite;">
+      <div style="display:flex;gap:80px;padding-right:80px;align-items:center;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Lifestyle Asia</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">The Straits Times</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Today Online</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Money FM 89.3</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">SG Magazine</span>
+      </div>
+      <div style="display:flex;gap:80px;padding-right:80px;align-items:center;">
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Lifestyle Asia</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">The Straits Times</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Today Online</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">Money FM 89.3</span>
+        <span style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;color:#1C1B19;white-space:nowrap;">SG Magazine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS -->
+  <section data-reveal style="background:#F7F4EF;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <p style="color:#C15B36;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">Our Bestsellers</p>
+          <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:700;margin:0;letter-spacing:-0.01em;">Loved by thousands of desks</h2>
+        </div>
+        <a href="Category.dc.html" style="font-weight:600;font-size:15px;border-bottom:2px solid #C15B36;padding-bottom:2px;">View all chairs &rarr;</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;">
+        <sc-for list="{{ bestsellers }}" as="p" hint-placeholder-count="5">
+          <div style="background:#fff;border:1px solid rgba(28,27,25,0.08);border-radius:2px;overflow:hidden;transition:transform .3s ease, box-shadow .3s ease;" style-hover="transform:translateY(-6px);box-shadow:0 24px 48px rgba(28,27,25,0.12);">
+            <div style="position:relative;aspect-ratio:3/4;background:#1C1B19;">
+              <img src="{{ p.image }}" alt="{{ p.name }}" style="display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;" style-hover="transform:scale(1.05);" />
+              <span style="position:absolute;top:14px;left:14px;background:#33544E;color:#F7F4EF;font-size:11px;font-weight:600;padding:5px 10px;border-radius:2px;letter-spacing:0.04em;">{{ p.tag }}</span>
+            </div>
+            <div style="padding:20px;">
+              <h3 style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;margin:0 0 6px;">{{ p.name }}</h3>
+              <p style="font-size:13px;color:#A9A29B;margin:0 0 12px;">{{ p.category }}</p>
+              <div style="display:flex;align-items:baseline;gap:8px;">
+                <span style="font-weight:700;font-size:17px;color:#C15B36;">{{ p.price }}</span>
+                <span style="font-size:13px;color:#A9A29B;text-decoration:line-through;">{{ p.was }}</span>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section data-reveal style="background:#1C1B19;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <p style="color:#C15B36;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">Shop By Category</p>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:700;margin:0 0 56px;color:#F7F4EF;letter-spacing:-0.01em;">Every budget, every posture</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="3">
+          <a href="{{ c.href }}" style="position:relative;display:block;aspect-ratio:4/5;border-radius:2px;overflow:hidden;">
+            <img src="{{ c.image }}" alt="{{ c.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;" style-hover="transform:scale(1.06);" />
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,27,25,0) 40%, rgba(28,27,25,0.85) 100%);"></div>
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:28px;">
+              <h3 style="font-family:'Space Grotesk',sans-serif;color:#F7F4EF;font-size:24px;font-weight:600;margin:0 0 6px;">{{ c.name }}</h3>
+              <p style="color:rgba(247,244,239,0.7);font-size:14px;margin:0;">{{ c.desc }}</p>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAIR FINDER -->
+  <section id="finder" data-reveal style="background:#F0EBE2;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:820px;margin:0 auto;text-align:center;">
+      <p style="color:#33544E;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">Not Sure Where To Start?</p>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4vw,42px);font-weight:700;margin:0 0 40px;letter-spacing:-0.01em;">Find your perfect chair in 30 seconds</h2>
+
+      <div style="background:#fff;border-radius:4px;padding:48px;box-shadow:0 24px 60px rgba(28,27,25,0.08);text-align:left;">
+        <sc-if value="{{ quizNotDone }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;gap:6px;margin-bottom:32px;">
+            <sc-for list="{{ quizDots }}" as="d" hint-placeholder-count="4">
+              <div style="height:4px;flex:1;border-radius:2px;background:{{ d.color }};"></div>
+            </sc-for>
+          </div>
+          <p style="font-size:13px;color:#A9A29B;font-weight:600;margin:0 0 10px;">QUESTION {{ quizStepDisplay }} OF 4</p>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;margin:0 0 28px;">{{ currentQuestion.q }}</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <sc-for list="{{ currentQuestion.options }}" as="opt" hint-placeholder-count="3">
+              <button onClick="{{ opt.select }}" style="text-align:left;padding:17px 21px;border-radius:3px;font-size:15px;font-family:'Work Sans',sans-serif;font-weight:500;cursor:pointer;transition:all .2s ease;border:{{ opt.border }};background:{{ opt.bg }};color:{{ opt.color }};">{{ opt.label }}</button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ goBack }}" style="margin-top:24px;background:none;border:none;color:#A9A29B;font-weight:600;font-size:14px;cursor:pointer;font-family:'Work Sans',sans-serif;padding:0;">&larr; Back</button>
+          </sc-if>
+        </sc-if>
+        <sc-if value="{{ quizDone }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;">
+            <p style="color:#33544E;font-weight:600;letter-spacing:0.1em;font-size:12px;text-transform:uppercase;margin:0 0 14px;">Your Match</p>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;margin:0 0 14px;">{{ quizResultName }}</h3>
+            <p style="color:#5b5651;font-size:15px;margin:0 0 28px;">{{ quizResultDesc }}</p>
+            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+              <a href="Category.dc.html" style="background:#C15B36;color:#fff;padding:14px 28px;border-radius:2px;font-weight:600;font-size:14px;">View Chair</a>
+              <button onClick="{{ resetQuiz }}" style="background:none;border:1px solid rgba(28,27,25,0.15);padding:14px 28px;border-radius:2px;font-weight:600;font-size:14px;color:#1C1B19;cursor:pointer;">Retake Quiz</button>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section data-reveal style="background:#1C1B19;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <p style="color:#C15B36;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">Client Reviews</p>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:700;margin:0 0 56px;color:#F7F4EF;letter-spacing:-0.01em;">Trusted by 12,000+ desks</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <div style="background:rgba(247,244,239,0.04);border:1px solid rgba(247,244,239,0.1);border-radius:3px;padding:32px;">
+            <p style="color:#C15B36;font-size:15px;letter-spacing:0.1em;margin:0 0 20px;">{{ r.stars }}</p>
+            <p style="color:rgba(247,244,239,0.85);font-size:15px;line-height:1.65;margin:0 0 24px;">"{{ r.quote }}"</p>
+            <p style="color:#F7F4EF;font-weight:600;font-size:14px;margin:0;">{{ r.name }}</p>
+            <p style="color:rgba(247,244,239,0.5);font-size:13px;margin:2px 0 0;">{{ r.role }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- USPs -->
+  <section data-reveal style="background:#F7F4EF;padding:100px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
+      <sc-for list="{{ usps }}" as="u" hint-placeholder-count="4">
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:#33544E;color:#F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;margin:0 auto 20px;">{{ u.icon }}</div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;margin:0 0 8px;">{{ u.title }}</h3>
+          <p style="font-size:14px;color:#5b5651;margin:0;line-height:1.5;">{{ u.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section data-reveal style="background:#F0EBE2;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:820px;margin:0 auto;">
+      <p style="color:#33544E;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">FAQs</p>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4vw,42px);font-weight:700;margin:0 0 40px;letter-spacing:-0.01em;">Questions, answered</h2>
+      <div style="display:flex;flex-direction:column;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid rgba(28,27,25,0.12);">
+            <button onClick="{{ f.toggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:22px 4px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Work Sans',sans-serif;">
+              <span style="font-size:16px;font-weight:600;color:#1C1B19;">{{ f.q }}</span>
+              <span style="font-size:20px;color:#C15B36;font-weight:400;">{{ f.symbol }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <p style="padding:0 4px 22px;font-size:15px;color:#5b5651;line-height:1.65;margin:0;">{{ f.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section data-reveal style="background:#F7F4EF;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <p style="color:#C15B36;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">From the Blog</p>
+          <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:700;margin:0;letter-spacing:-0.01em;">Sit smarter</h2>
+        </div>
+        <a href="Blog.dc.html" style="font-weight:600;font-size:15px;border-bottom:2px solid #C15B36;padding-bottom:2px;">Read the blog &rarr;</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+        <sc-for list="{{ posts }}" as="post" hint-placeholder-count="3">
+          <a href="Blog.dc.html" style="display:block;">
+            <div style="aspect-ratio:4/3;overflow:hidden;border-radius:2px;margin-bottom:18px;">
+              <img src="{{ post.image }}" alt="{{ post.title }}" style="width:100%;height:100%;object-fit:cover;transition:transform .5s ease;" style-hover="transform:scale(1.05);" />
+            </div>
+            <p style="color:#A9A29B;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 8px;">{{ post.tag }}</p>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;margin:0 0 8px;color:#1C1B19;">{{ post.title }}</h3>
+            <p style="font-size:14px;color:#5b5651;margin:0;line-height:1.5;">{{ post.excerpt }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section data-reveal style="background:#1C1B19;padding:120px 32px;opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;">
+      <div>
+        <p style="color:#C15B36;font-weight:600;letter-spacing:0.1em;font-size:13px;text-transform:uppercase;margin:0 0 12px;">Get In Touch</p>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4vw,42px);font-weight:700;margin:0 0 24px;color:#F7F4EF;letter-spacing:-0.01em;">Let's find your fit</h2>
+        <p style="color:rgba(247,244,239,0.7);font-size:15px;line-height:1.7;margin:0 0 36px;max-width:420px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our team typically replies within one business day.</p>
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div>
+            <p style="color:rgba(247,244,239,0.5);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 4px;">WhatsApp — Sales</p>
+            <p style="color:#F7F4EF;font-size:16px;margin:0;">+65 8032 6676 &nbsp;·&nbsp; +65 9118 9876</p>
+          </div>
+          <div>
+            <p style="color:rgba(247,244,239,0.5);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 4px;">Email</p>
+            <p style="color:#F7F4EF;font-size:16px;margin:0;">hello@ergoseat.online</p>
+          </div>
+        </div>
+      </div>
+      <form onSubmit="{{ handleContactSubmit }}" style="background:#F7F4EF;padding:36px;border-radius:3px;display:flex;flex-direction:column;gap:16px;">
+        <input placeholder="Name" style="padding:14px 16px;border:1px solid rgba(28,27,25,0.15);border-radius:2px;font-family:'Work Sans',sans-serif;font-size:14px;background:#fff;" />
+        <input placeholder="Email" type="email" style="padding:14px 16px;border:1px solid rgba(28,27,25,0.15);border-radius:2px;font-family:'Work Sans',sans-serif;font-size:14px;background:#fff;" />
+        <input placeholder="Phone" style="padding:14px 16px;border:1px solid rgba(28,27,25,0.15);border-radius:2px;font-family:'Work Sans',sans-serif;font-size:14px;background:#fff;" />
+        <textarea placeholder="Your message" rows="4" style="padding:14px 16px;border:1px solid rgba(28,27,25,0.15);border-radius:2px;font-family:'Work Sans',sans-serif;font-size:14px;resize:vertical;background:#fff;"></textarea>
+        <button type="submit" style="background:#C15B36;color:#fff;padding:16px;border:none;border-radius:2px;font-weight:600;font-size:15px;cursor:pointer;font-family:'Work Sans',sans-serif;">Send Message</button>
+        <sc-if value="{{ contactSent }}" hint-placeholder-val="{{ false }}">
+          <p style="color:#33544E;font-size:13px;margin:0;">Thanks! We'll be in touch shortly.</p>
+        </sc-if>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#141312;padding:72px 32px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1.2fr repeat(4,1fr);gap:40px;margin-bottom:56px;">
+        <div>
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:#F7F4EF;margin:0 0 16px;">ERGOSEAT</p>
+          <p style="color:rgba(247,244,239,0.5);font-size:14px;line-height:1.6;max-width:280px;">Economical, science-backed ergonomic chairs for home, office, and everything between.</p>
+        </div>
+        <div>
+          <p style="color:#F7F4EF;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 18px;">Shop</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="Category.dc.html?cat=Economical" style="color:rgba(247,244,239,0.55);font-size:14px;">Economical</a>
+            <a href="Category.dc.html?cat=Premium" style="color:rgba(247,244,239,0.55);font-size:14px;">Premium</a>
+            <a href="Category.dc.html?cat=Luxury" style="color:rgba(247,244,239,0.55);font-size:14px;">Luxury</a>
+          </div>
+        </div>
+        <div>
+          <p style="color:#F7F4EF;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 18px;">Shop By You</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="Corporate.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Corporate &amp; Office</a>
+            <a href="HomeOffice.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Home &amp; Remote</a>
+            <a href="Gamers.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Gamers</a>
+            <a href="Budget.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Budget-Conscious</a>
+          </div>
+        </div>
+        <div>
+          <p style="color:#F7F4EF;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 18px;">Company</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="About.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">About Us</a>
+            <a href="Blog.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Blog</a>
+            <a href="Contact.dc.html" style="color:rgba(247,244,239,0.55);font-size:14px;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <p style="color:#F7F4EF;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 18px;">Support</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="#" style="color:rgba(247,244,239,0.55);font-size:14px;">Warranty Policy</a>
+            <a href="#" style="color:rgba(247,244,239,0.55);font-size:14px;">Shipping & Delivery</a>
+            <a href="#" style="color:rgba(247,244,239,0.55);font-size:14px;">Returns & Exchange</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(247,244,239,0.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <p style="color:rgba(247,244,239,0.4);font-size:13px;margin:0;">© 2026 Ergoseat. All rights reserved.</p>
+        <p style="color:rgba(247,244,239,0.4);font-size:13px;margin:0;">Singapore</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    quizStep: 0,
+    quizAnswers: {},
+    quizDone: false,
+    openFaq: 0,
+    contactSent: false
+  };
+
+  componentDidMount() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'none';
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal]').forEach(n => io.observe(n));
+  }
+
+  QUESTIONS = [
+    { q: 'Where will your chair live?', opts: ['Home office', 'Corporate office', 'Gaming setup'] },
+    { q: "What's your top priority?", opts: ['Budget-friendly comfort', 'Ergonomic support & posture', 'Premium build & style'] },
+    { q: 'How many hours do you sit per day?', opts: ['Under 4 hours', '4–8 hours', '8+ hours'] },
+    { q: 'Pick a vibe', opts: ['Minimal & clean', 'Classic & professional', 'Bold & sporty'] }
+  ];
+
+  RESULTS = [
+    { name: 'Ovie', desc: 'A compact, budget-friendly entry chair built for shorter sessions — great for a first home office upgrade.' },
+    { name: 'Bubbles', desc: 'Soft, breathable mesh comfort at an approachable price — ideal for everyday home use.' },
+    { name: 'B-Flip', desc: 'Our most versatile all-rounder, with a flip-back headrest that adapts from home to corporate desks.' },
+    { name: 'eGGs (290B)', desc: 'Premium ergonomic support engineered for long, demanding workdays.' },
+    { name: 'BIO-H', desc: 'Our newest flagship — bold design, top-tier adjustability, built for serious setups.' }
+  ];
+
+  selectAnswer = (score) => {
+    this.setState(s => {
+      const answers = { ...s.quizAnswers, [s.quizStep]: score };
+      const nextStep = s.quizStep + 1;
+      return { quizAnswers: answers, quizStep: nextStep, quizDone: nextStep >= this.QUESTIONS.length };
+    });
+  };
+
+  goBack = () => {
+    this.setState(s => ({ quizStep: Math.max(0, s.quizStep - 1), quizDone: false }));
+  };
+
+  resetQuiz = () => this.setState({ quizStep: 0, quizAnswers: {}, quizDone: false });
+
+  toggleFaq = (i) => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }));
+
+  handleContactSubmit = (e) => {
+    e.preventDefault();
+    this.setState({ contactSent: true });
+  };
+
+  renderVals() {
+    const step = this.state.quizStep;
+    const q = this.QUESTIONS[Math.min(step, this.QUESTIONS.length - 1)];
+    const quizScore = Object.values(this.state.quizAnswers).reduce((a, b) => a + b, 0);
+    const resultIdx = Math.min(4, Math.floor((quizScore / 8) * 5));
+    const result = this.RESULTS[resultIdx] || this.RESULTS[0];
+    const selectedForStep = this.state.quizAnswers[step];
+
+    const faqData = [
+      { q: 'How long is the warranty?', a: 'Ergoseat chairs are covered for up to 3 years depending on the model, covering manufacturer defects such as gas lift faults, base support issues, or mesh failure. Warranty does not cover negligence or damage from misuse.' },
+      { q: 'Do you offer on-site repair?', a: 'Yes — on-site service is available for a flat S$20 transportation fee, with labour, parts, and materials free of charge. Alternatively, bring your chair to our office for free repair (3–5 working days).' },
+      { q: 'What is your shipping policy?', a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Standard delivery timelines and coverage areas will be listed here.' },
+      { q: 'Can I return or exchange my chair?', a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.' },
+      { q: 'Do you offer bulk / corporate pricing?', a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reach out via our contact form for volume pricing.' }
+    ].map((f, i) => ({ ...f, open: this.state.openFaq === i, symbol: this.state.openFaq === i ? '−' : '+', toggle: () => this.toggleFaq(i) }));
+
+    return {
+      bestsellers: [
+        { name: 'Bubbles', category: 'Economical', image: 'https://img.myshopline.com/image/store/1678434065355/346-597-Bubbles-Ergoseat-1-Cover-Amazon-091525.jpg?w=1000&h=1000', tag: 'BESTSELLER', price: '$135.90', was: '$228.90' },
+        { name: 'Ovie', category: 'Economical', image: 'https://img.myshopline.com/image/store/1678434065355/310-821-Ovie-Ergoseat-1-Cover-Amazon-072125.jpg?w=1000&h=1000', tag: 'BUDGET PICK', price: '$99.90', was: '$199.90' },
+        { name: 'B-Flip', category: 'Premium', image: 'https://img.myshopline.com/image/store/1678434065355/309-21B-Flip-Ergoseat-1-Cover-Amazon-082625.jpg?w=1000&h=1000', tag: 'MOST VERSATILE', price: '$129.90', was: '$259.90' },
+        { name: 'eGGs (290B)', category: 'Premium', image: 'https://img.myshopline.com/image/store/1678434065355/7-290B-ERGOSEAT-1-Amazon-052724.jpg?w=1000&h=1000', tag: 'TOP RATED', price: '$139.90', was: '$259.90' },
+        { name: 'BIO-H', category: 'Luxury', image: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=1000&q=80', tag: 'NEW', price: 'From $249.90', was: '' }
+      ],
+      categories: [
+        { name: 'Economical', desc: 'Everyday comfort, honest pricing.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80', href: 'Category.dc.html?cat=Economical' },
+        { name: 'Premium', desc: 'Advanced adjustability for daily grinders.', image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?auto=format&fit=crop&w=800&q=80', href: 'Category.dc.html?cat=Premium' },
+        { name: 'Luxury', desc: 'Flagship design and materials.', image: 'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&w=800&q=80', href: 'Category.dc.html?cat=Luxury' }
+      ],
+      quizNotDone: !this.state.quizDone,
+      quizDone: this.state.quizDone,
+      quizStepDisplay: Math.min(step + 1, 4),
+      quizDots: [0,1,2,3].map(i => ({ color: i <= step ? '#C15B36' : 'rgba(28,27,25,0.1)' })),
+      currentQuestion: { q: q.q, options: q.opts.map((label, i) => {
+        const isSel = selectedForStep === i;
+        return { label, select: () => this.selectAnswer(i), border: isSel ? '2px solid #C15B36' : '1px solid rgba(28,27,25,0.12)', bg: isSel ? '#fff' : '#F7F4EF', color: isSel ? '#C15B36' : '#1C1B19' };
+      }) },
+      quizResultName: result.name,
+      quizResultDesc: result.desc,
+      resetQuiz: this.resetQuiz,
+      showBack: step > 0,
+      goBack: this.goBack,
+      reviews: [
+        { stars: '★★★★★', quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. My back pain disappeared within two weeks.', name: 'Rachel T.', role: 'Home Office, Singapore' },
+        { stars: '★★★★★', quote: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Great value for a corporate bulk order.', name: 'Marcus L.', role: 'Operations Manager' },
+        { stars: '★★★★☆', quote: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.', name: 'Priya S.', role: 'Freelance Designer' }
+      ],
+      usps: [
+        { icon: '3Y', title: '3-Year Warranty', desc: 'Coverage on manufacturer defects, model-dependent.' },
+        { icon: '$0', title: 'Free Delivery', desc: 'Lorem ipsum placeholder shipping policy.' },
+        { icon: 'S$20', title: 'On-Site Service', desc: 'Flat-fee repairs at your doorstep, parts free.' },
+        { icon: '↺', title: 'Easy Exchange', desc: 'Lorem ipsum placeholder return policy.' }
+      ],
+      faqs: faqData,
+      posts: [
+        { title: 'How to set up your chair for perfect posture', tag: 'Ergonomics 101', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80' },
+        { title: 'Mesh vs. foam: which seat material wins?', tag: 'Guides', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80' },
+        { title: 'Inside our BIO-H design process', tag: 'Behind The Brand', excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', image: 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&w=800&q=80' }
+      ],
+      contactSent: this.state.contactSent,
+      handleContactSubmit: this.handleContactSubmit
+    };
+  }
+}
+</script>
+</body>
+</html>
